@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://attunehq.com/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -46,6 +46,7 @@ const config: Config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/attunehq/docs/tree/main/docs/',
+          routeBasePath: '/',
         },
         blog: {
           showReadingTime: true,
@@ -72,12 +73,17 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'Attune',
-      logo: {
-        alt: 'Attune Logo',
-        src: 'img/logo.png',
-      },
+      // logo: {
+      //   alt: 'Attune Logo',
+      //   src: 'img/logo.png',
+      // },
       items: [
         {
           type: 'docSidebar',
@@ -136,7 +142,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Attune Technologies, Inc.`,
+      copyright: `Copyright ${new Date().getFullYear()} Attune Technologies, Inc.`,
     },
     prism: {
       theme: prismThemes.github,
